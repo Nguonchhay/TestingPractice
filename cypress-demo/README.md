@@ -1,8 +1,12 @@
 # UAT with Cypress
 
-We will implement UAT with cypress on [amazone website](https://www.amazon.com/)
+We will implement UAT with cypress on [amazon website](https://www.amazon.com/)
 
-How to run test
+Test Example
+
+* UAT with Cypress
+
+How to run UAT with Cypress
 ---
 
 * yarn run test
