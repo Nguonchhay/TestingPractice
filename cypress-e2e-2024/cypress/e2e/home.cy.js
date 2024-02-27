@@ -26,4 +26,19 @@ describe('Homepage', () => {
     cy.get('h1').contains('Cypress API')
     cy.get('.banner .container p').contains('uses of the Cypress API')
   })
+
+  it('has links that are accessible', () => {
+    cy.get('a').each(ele => {
+      const link = ele.prop('href')
+      cy.request({
+        url: link,
+        failOnStatusCode: false
+      }).then(res => {
+        cy.log({
+          page: link,
+          status: res.status
+        })
+      })
+    })
+  })
 })
