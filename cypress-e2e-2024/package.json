@@ -4,7 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "cypress:open": "cypress open"
+    "cypress:open": "cypress open",
+    "test:headlesss": "cypress run",
+    "test:chrome": "cypress run --headed --config-file cypress.config.js --browser chrome",
+    "test:firefox": "cypress run --headed --config-file cypress.config.js --browser firefox",
+    "test:edge": "cypress run --headed --config-file cypress.config.js --browser edge"
   },
   "keywords": [],
   "author": "",

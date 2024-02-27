@@ -14,7 +14,7 @@ describe('Homepage', () => {
     cy.wait(2000)
   })
 
-  it('has main nav', () => {
+  it('has main nav and all menu are accessible', () => {
     cy.get('a[href="/utilities"]').first().click()
     cy.url().should('include', '/utilities')
     cy.get('h1').contains('Utilities')
