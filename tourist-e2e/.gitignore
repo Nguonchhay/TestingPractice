@@ -1,0 +1,6 @@
+/node_modules/
+/cypress/reports/
+/mochawesome-report/
+/cypress/videos/
+/cypress/videos_record/*
+!/cypress/videos_record/.gitkeep
