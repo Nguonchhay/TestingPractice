@@ -1,26 +1,21 @@
 package com.test;
 
-import io.appium.java_client.android.AndroidDriver;
-import io.appium.java_client.android.options.UiAutomator2Options;
-import io.appium.java_client.remote.AutomationName;
-import org.junit.Test;
-
-import java.net.MalformedURLException;
-import java.net.URL;
+import configs.Property;
 
 public class AppiumTest {
 
-    @Test
-    public void launchAndroidTest() throws MalformedURLException {
-        UiAutomator2Options options = new UiAutomator2Options();
-        options.setPlatformName("Android");
-        options.setAutomationName(AutomationName.ANDROID_UIAUTOMATOR2);
-        options.setDeviceName("Local-Android-Device");
-        options.setApp(System.getProperty("user.dir") + "/apps/test-app-android.apk");
+    protected String appiumServerUrl;
 
-        AndroidDriver driver = new AndroidDriver(
-            new URL("http://0.0.0.0:4723"),
-            options
-        );
+    protected Property property;
+    protected String testDeviceName;
+
+    public AppiumTest() {
+        property = Property.getInstance();
+        appiumServerUrl = property.getConfigValue("HOST");
+        testDeviceName = "Testing Device";
+    }
+
+    public String getTestAppPath(String filename) {
+        return property.getProjectPath() + "apps/" + filename;
     }
 }

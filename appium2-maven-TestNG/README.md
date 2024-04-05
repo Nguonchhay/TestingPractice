@@ -14,6 +14,10 @@ Environment set up
 npm install -g appium-installer
 appium-installer # select appium, drivers, and plugins that you need
 ```
+5. Generate configuration file and update its values
+```
+cp -a .env.example .env
+```
 
 How to run
 ===
