@@ -8,7 +8,7 @@ module.exports = defineConfig({
     html: true,
     json: true,
   },
-  video: false,
+  video: true,
   videoCompression: true,
   videosFolder: 'cypress/videos_record',
   e2e: {

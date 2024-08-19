@@ -1,5 +1,5 @@
 describe('Order Tourist SIM', () => {
-    Cypress._.times(1, (num) => {
+    Cypress._.times(10, (num) => {
         it(`Order SIM for ${num + 1} times`, () => {
             cy.visit('/simsales/1001')
 
@@ -33,12 +33,12 @@ describe('Order Tourist SIM', () => {
             cy.wait(3000)
             cy.contains('Choose Payment Method').should('be.visible')
             cy.get('button[type="submit"]').click()
-            cy.wait(5000)
+            cy.wait(3000)
 
             // Close payment popup
             cy.get('.aba-close-button').click()
             cy.on('window:confirm',() => true)
-            cy.wait(5000)
+            cy.wait(2000)
             cy.contains('Selected SIM package').should('be.visible')
         })
     })
