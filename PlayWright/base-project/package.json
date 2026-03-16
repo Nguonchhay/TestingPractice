@@ -1,0 +1,23 @@
+{
+  "name": "base-project",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test:e2e:headless": "npx playwright test tests/e2e/",
+    "test:e2e:headless:chrome": "npx playwright test tests/e2e/ --project=chromium",
+    "test:e2e": "npx playwright test tests/e2e/ --headed",
+    "test:api": "npx playwright test tests/api/",
+    "test:component": "npx playwright test -c playwright-ct.config.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@playwright/test": "^1.58.2",
+    "@types/node": "^25.5.0"
+  },
+  "dependencies": {
+    "dotenv": "^17.3.1"
+  }
+}
